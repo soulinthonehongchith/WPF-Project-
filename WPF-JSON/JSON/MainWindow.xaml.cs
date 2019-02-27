@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿//Soulinthone Hongchith
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -43,7 +44,11 @@ namespace JSON
                 if (response.IsSuccessStatusCode)
                 {
                     var content = response.Content.ReadAsStringAsync().Result;
-                    HerokuQuote q = JsonConvert.DeserializeObject<HerokuQuote>(content);                    
+                    HerokuQuote q = JsonConvert.DeserializeObject<HerokuQuote>(content);
+                    {
+                        quote.Inlines.Add(new Italic(new Run(q.quote)));
+                        quote.Inlines.Add(new Bold (new Run(" -" + q.character)));
+                    }
                 }
             }
         }

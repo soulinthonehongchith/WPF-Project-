@@ -6,8 +6,21 @@
         xmlns:local="clr-namespace:JSON"
         mc:Ignorable="d"
         Title="GOT Quotes?" Height="450" Width="800" Loaded="Window_Loaded">
-    <Grid Loaded="Grid_Loaded">
-        <TextBlock HorizontalAlignment="Left" Margin="494,20,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="161" Width="253"/>
+    <Grid RenderTransformOrigin="0.49,0.508" Margin="0,0,0,-0.333" HorizontalAlignment="Left" Width="793">
+        <Grid.Background>
+            <ImageBrush ImageSource="https://cdn1-www.comingsoon.net/assets/uploads/2018/06/GOTSPINS.jpg" Stretch="UniformToFill"/>
+
+        </Grid.Background>
+        <TextBlock Name="quote" Margin="512,19,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="161" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" Width="253">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.047"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
 
     </Grid>
 
